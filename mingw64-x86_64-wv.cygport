@@ -1,0 +1,23 @@
+CROSS_HOST="x86_64-w64-mingw32"
+inherit cross
+
+NAME="mingw64-x86_64-wv"
+VERSION=1.2.9
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="MS Word conversion library for Win64 toolchain"
+DESCRIPTION="wvWare includes a library and sample apps that convert MS Word
+2,6,7,8,9 files to html and latex. The Word 2 conversion is still incomplete
+(no formatting), but it will do a passable job extracting the text, which is
+what you probably want anyway."
+HOMEPAGE="http://wvware.sourceforge.net/"
+SRC_URI="http://www.abisource.com/downloads/wv/${VERSION}/wv-${VERSION}.tar.gz"
+SRC_DIR="wv-${VERSION}"
+
+CYGCONF_ARGS="--with-libwmf"
+
+src_install() {
+	cd ${B}
+	cyginstall bin_PROGRAMS= bin_SCRIPTS= man_MANS= pkgdata_DATA= \
+		ptn_DATA= wdf_DATA=
+}
