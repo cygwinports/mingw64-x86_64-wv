@@ -3,7 +3,7 @@ inherit cross
 
 NAME="mingw64-x86_64-wv"
 VERSION=1.2.9
-RELEASE=1
+RELEASE=2
 CATEGORY="Devel"
 SUMMARY="MS Word conversion library for Win64 toolchain"
 DESCRIPTION="wvWare includes a library and sample apps that convert MS Word
